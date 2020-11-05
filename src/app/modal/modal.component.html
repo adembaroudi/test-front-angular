@@ -1,0 +1,24 @@
+<h4>Add car</h4>
+<form [formGroup]="list">
+  <ul class="unstyled-list">
+    <li>
+      <mat-form-field appearance="outline">
+        <!-- <mat-label>Car name</mat-label> -->
+        <input matInput type="text" placeholder="volkswagen..." formControlName="title" />
+
+        <!-- <mat-error *ngIf="list.hasError('required', 'carName')">Car name is required </mat-error> -->
+      </mat-form-field>
+    </li>
+    <li>
+      <mat-form-field appearance="outline">
+        <!-- <mat-label>Category</mat-label> -->
+        <input matInput type="text" placeholder="citadine..." formControlName="body" />
+
+        <!-- <mat-error *ngIf="list.hasError('required', 'categorie')">Category is required </mat-error> -->
+      </mat-form-field>
+    </li>
+    <li>
+   
+    <button [disabled]='!list.valid' class="btn btn-primary ml-4" mat-raised-button (click)="ADD()">ADD</button>
+  </ul>
+</form>

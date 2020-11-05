@@ -1,0 +1,44 @@
+<br>
+<br>
+
+<div class="example-container  col-mx-10 col-lg-10 col-md-10">
+    <div class="example-button-container">
+       
+        <button mat-fab  color="primary"(click)=" openModal()">+ Post</button>
+      </div>
+      <table class="table ">
+        <thead>
+          <tr class="bg-dark" style="color: white;" >
+            <th scope="col">Title </th>
+            <th scope="col">Body</th>
+            
+           
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of table  ; let i=index  " >
+            <td routerLink = "/detail/{{row.id}}">{{row.title}}</td>
+            <td routerLink = "/detail/{{row.id}}">{{row.body}}</td>
+          
+           
+            <td>
+              <div class="example-button-row">
+              <button mat-fab color="primary" (click)=" openUpdateDialog(row.id)"  aria-label="Example icon button with a home icon">
+                	<mat-icon>build</mat-icon>
+              </button>
+                <button  mat-fab (click)=" openDeleteDialog(row.id)" color="warn"aria-label="Example icon button with a delete icon">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              
+      
+            </div></td>
+          </tr>
+        </tbody>
+      </table> 
+      
+      
+
+
+</div>
+ 
